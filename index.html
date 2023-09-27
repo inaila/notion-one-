@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+
+    <style>
+
+        .widget {
+            padding: 5px 5px ;
+            color: #000000;
+            text-align: center;
+                max-width: 95%;
+            margin: auto;
+            font-variant-caps: petite-caps;
+            font-size: 2em;
+
+        }
+
+        div {
+             width: 95%;
+             min-height: 100px;
+
+            background:
+                linear-gradient(to right, black 4px, transparent 4px) 0 0,
+                linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+}
+
+     
+    </style>
+</head>
+<body>
+
+    <div class="widget" id="widget"></div>
+
+
+<script>
+
+quotes=[
+
+"“Guide Us To The Straight Path” – Surah Fatiha Ayat 6 ",
+"“This is the Book about which there is no doubt, a guidance for those conscious of Allah” – Surah Baqarah Ayat 2",
+"“….so whenever guidance comes to you from Me, then whoever follows my guidance, then there will neither be any fear on them nor will they grieve.” – Surah Baqarah Ayat 38",
+"“And do not mix the truth with falsehood or conceal the truth while you know [it].” – Surah Baqarah Ayat 42",
+"“So remember Me; I will remember you. And be grateful to Me and do not deny Me.” – Surah Baqarah Ajat 152",
+"“Indeed we belong to Allah, and indeed to Him we will return” – Surah Baqarah Ayat 156",
+"“Indeed, Allah is my Lord and your Lord, so worship Him. That is the straight path.” – Surah Al'Imran Ayat 51",
+"“And hold firmly to the rope of Allah all together and do not become divided. And remember the favor of Allah upon you – when you were enemies and He brought your hearts together and you became, by His favor, brothers.” – Surah Al'Imran Ayat 103",
+"“Wherever you may be, death will overtake you, even if you should be within towers of lofty construction.” – Surah An-Nisa Ayat 78.",
+"“Your ally is none but Allah and [therefore] His Messenger and those who have believed – those who establish prayer and give zakah, and they bow [in worship].” – Surah Al'Maidah Ayat 55",
+"“And the worldly life is not but amusement and diversion; but the home of the Hereafter is best for those who fear Allah, so will you not reason?” – Surah Anam Ayat 32",
+"“Indeed, the mercy of Allah is near to the doers of good.” – Surah Anam Ayah 56",
+"“Take what is given freely, enjoin what is good, and turn away from the ignorant. And if an evil suggestion comes to you from Satan, then seek refuge in Allah . Indeed, He is Hearing and Knowing.” – Surah Al-A’raf Ayat 199-200",
+"“So when the Qur’an is recited, then listen to it and pay attention that you may receive mercy.” – Surah Araf Ayat 204",
+"“But Allah would not punish them while you, [O Muhammad], are among them, and Allah would not punish them while they seek forgiveness.” – Surah Anfal Ayat 33",
+"“[Remember] when you asked help of your Lord, and He answered you, “Indeed, I will reinforce you with a thousand from the angels, following one another.” – Surah Anfal Ayat 9",
+"“Indeed, to Allah belongs the dominion of the heavens and the earth; He gives life and causes death. And you have not besides Allah any protector or any helper.” – Surah Tawbah Ayat 116",
+"“Go forth, whether light or heavy, and strive with your wealth and your lives in the cause of Allah . That is better for you, if you only knew.” – Surah Taubah Ayat 41",
+"“Unquestionably, to Allah belongs whatever is in the heavens and the earth. Unquestionably, the promise of Allah is truth, but most of them do not know” – Surah Yunus Ayat 55",
+"And they say, “Why is a sign not sent down to him from his Lord?” So say, “The unseen is only for Allah [to administer], so wait; indeed, I am with you among those who wait.” – Surah Yunus Ayat 20",
+"“Those who have believed and whose hearts are assured by the remembrance of Allah . Unquestionably, by the remembrance of Allah hearts are assured. Those who have believed and done righteous deeds – a good state is theirs and a good return.” – Surah R’ad Ayat 28-29",
+"“Our Lord, forgive me and my parents and the believers the Day the account is established.” – Surah Ibrahim Ayat 41",
+"“If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, My punishment is severe.” – Surah Ibrahim Ayat 7",
+"“And We have not created the heavens and earth and that between them except in truth. And indeed, the Hour is coming; so forgive with gracious forgiveness.” – Surah Hijr Ayat 85",
+"“Assuredly, Allah knows what they conceal and what they declare. Indeed, He does not like the arrogant.” – Surah Nahl Ayat 23",
+"“On the Day when every soul will come disputing for itself, and every soul will be fully compensated for what it did, and they will not be wronged.” – Surah Nahl Ayat 111",
+"“And do not walk upon the earth exultantly. Indeed, you will never tear the earth [apart], and you will never reach the mountains in height.” – Surah Isra Ayat 37",
+"“Wealth and children are [but] adornment of the worldly life. But the enduring good deeds are better to your Lord for reward and better for [one’s] hope.” – Surah Kahf Ayat 46 ",
+"“And all of them are coming to Him on the Day of Resurrection alone.” – Surah Maryam Ayat 95",
+"“…every soul may be recompensed according to that for which it strives” – Surah Ta Ha Ayat 20",
+"“Every soul will taste death. And We test you with evil and with good as trial; and to Us you will be returned.” – Surah Anbiya Ayat 35",
+"“So have they not traveled through the earth and have hearts by which to reason and ears by which to hear? For indeed, it is not eyes that are blinded, but blinded are the hearts which are within the breasts” – Surah Al-Haj Ayat 46",
+"“Repel evil with that which is better.” – Surah Al Muminun Ayat 96",
+"“And the servants of the Most Merciful are those who walk upon the earth easily, and when the ignorant address them [harshly], they say [words of] peace,” – Surah Furqan Ayat 63",
+"“And when I am ill, it is He who cures me” – Surah Ash-Shu'ara Ayat 80",
+"“Perhaps it is close behind you – some of that for which you are impatient.” – Surah Naml Ayat 72  Ayat 185",
+"“So be patient. Indeed, the promise of Allah is truth. And let them not disquiet you who are not certain [in faith].” – Surah Ar-Rum Ayat 60",
+"“And no soul knows what has been hidden for them of comfort for eyes as reward for what they used to do.” – Surah Sajdah Ayat 17",
+"“His command is only when He intends a thing that He says to it, ‘Be’, and it is.” – Surah Yaseen Ayat 82",
+"“He said, ‘My Lord, forgive me and grant me a kingdom such as will not belong to anyone after me. Indeed, You are the Bestower’.” – Surah Sad Ayat 35",
+"“And every soul will be fully compensated [for] what it did; and He is most knowing of what they do.” – Surah Az-Zumar Ayat 7",
+"“O my people, this worldly life is only [temporary] enjoyment, and indeed, the Hereafter – that is the home of [permanent] settlement.” – Surah Ghafir Ayat 81",
+"“And your Lord says, “Call upon Me; I will respond to you.” Indeed, those who disdain My worship will enter Hell [rendered] contemptible.” – Surah Ghafir Ayat 60",
+"“But none is granted it except those who are patient” – Surah Fussilat Ayat 35",
+"“Indeed, those who believe and do righteous deeds – for them is a reward uninterrupted.” – Surah Fussilat Ayat 8",
+"“And whoever is patient and forgives – indeed, that is of the matters [requiring] determination.” – Surah Ash Shura Ayat 43",
+"“And gold ornament. But all that is not but the enjoyment of worldly life. And the Hereafter with your Lord is for the righteous.” – Surah Az Zukhruf Ayat 35",
+"“Whoever does a good deed – it is for himself; and whoever does evil – it is against the self. Then to your Lord you will be returned.” – Surah Jathiya Ayat 15",
+"“[This] worldly life is only amusement and diversion. And if you believe and fear Allah, He will give you your rewards and not ask you for your properties.” – Surah Muhammad Ayat 36",
+"“And those who believe and do righteous deeds and believe in what has been sent down upon Muhammad – and it is the truth from their Lord – He will remove from them their misdeeds and amend their condition.” – Surah Muhammad Ayat 2",
+"“And to Allah belongs the dominion of the heavens and the earth. He forgives whom He wills and punishes whom He wills. And ever is Allah Forgiving and Merciful.” – Surah Al Fath Ayat 14",
+"“And every soul will come, with it a driver and a witness.” – Surah Qaf Ayat 21 Ayat 185",
+"“And be patient, [O Muhammad], for the decision of your Lord, for indeed, you are in Our eyes. And exalt [Allah] with praise of your Lord when you arise.” – Surah At-Tur Ayat 48",
+"“And everything they did is in written records. And every small and great [thing] is inscribed.” – Surah Qamar Ayat 52",
+"“Is the reward for good [anything] but good?” – Surah Ar-Rahman Ayat 60",
+"“Is it you who brought it down from the clouds, or is it We who bring it down? If We willed, We could make it bitter, so why are you not grateful?” – Surah Waqiah Ayat 69-70",
+"“In order that you not despair over what has eluded you and not exult [in pride] over what He has given you. And Allah does not like everyone self-deluded and boastful” – Surah Hadid Ayat 23",
+"“O you who have believed, fear Allah . And let every soul look to what it has put forth for tomorrow – and fear Allah . Indeed, Allah is Acquainted with what you do.” – Surah Hashr Ayat 18",
+"“If We had sent down this Qur’an upon a mountain, you would have seen it humbled and coming apart from fear of Allah . And these examples We present to the people that perhaps they will give thought. – Surah Hashr Ayat 21",
+"“Never will your relatives or your children benefit you; the Day of Resurrection He will judge between you. And Allah, of what you do, is Seeing.” – Surah Mumtahanah Ayat 3",
+"“[It is that] you believe in Allah and His Messenger and strive in the cause of Allah with your wealth and your lives. That is best for you, if you should know.” – Surah As Saff Ayat 11",
+"“What is with Allah is better than diversion and than a transaction, and Allah is the best of providers.” – Surah Jumuah Ayat 11",
+"“O you who have believed, let not your wealth and your children divert you from remembrance of Allah . And whoever does that – then those are the losers.” – Surah Al Munafiqun Ayat 9",
+"“No disaster strikes except by permission of Allah . And whoever believes in Allah – He will guide his heart. And Allah is Knowing of all things.” – Surah At-Taghabun Ayat 11",
+"“And will provide for him from where he does not expect. And whoever relies upon Allah – then He is sufficient for him. Indeed, Allah will accomplish His purpose. Allah has already set for everything a [decreed] extent.” – Surah At-Talaq Ayat 3",
+"“Say, ‘The knowledge is only with Allah, and I am only a clear warner’.” – Surah Al Mulk  Ayat 185",
+"“And do not obey every worthless habitual swearer [And] scorner, going about with malicious gossip – A preventer of good, transgressing and sinful, Cruel, moreover, and an illegitimate pretender.” – Surah Al Qalam Ayat 10-14",
+"“That Day, you will be exhibited [for judgement]; not hidden among you is anything concealed.” – Surah Haqqah Ayat 18",
+"“And those who are to their trusts and promises attentive And those who are in their testimonies upright And those who [carefully] maintain their prayer: They will be in gardens, honored.” – Surah Al-Ma’arij Ayat 32-35",
+"“And said, ‘Ask forgiveness of your Lord. Indeed, He is ever a Perpetual Forgiver.” – Surah Nuh Ayat 10",
+"“My Lord, forgive me and my parents and whoever enters my house a believer and the believing men and believing women. And do not increase the wrongdoers except in destruction.” – Surah Nuh Ayat 28",
+"“And when we heard the guidance, we believed in it. And whoever believes in his Lord will not fear deprivation or burden.” – Surah Jinn Ayat 13",
+"“Establish prayer and give zakah and loan Allah a goodly loan. And whatever good you put forward for yourselves – you will find it with Allah. It is better and greater in reward.” – Surah Muzzammil Ayat 20",
+"“Indeed, the Qur’an is a reminder” – Surah Muddathir Ayat 54",
+"“Rather, man, against himself, will be a witness, Even if he presents his excuses.” – Surah Qiyamah Ayat 14-15",
+"“Indeed, We guided him to the way, be he grateful or be he ungrateful.” – Surah Al-Insan Ayat 3",
+"“The Day that the Spirit and the angels will stand in rows, they will not speak except for one whom the Most Merciful permits, and he will say what is correct.” – Surah Naba Ayat 38",
+"“You are only a warner for those who fear it. It will be, on the Day they see it, as though they had not remained [in the world] except for an afternoon or a morning thereof.” – Surah Naziat Ayat 39-40",
+"“As for he who thinks himself without need, To him you give attention. – Surah Abasa Ayat 5-6",
+"“So where are you going? It is not except a reminder to the worlds For whoever wills among you to take a right course.” – Surah Takwir Ayat 26-28",
+"“Except for those who believe and do righteous deeds. For them is a reward uninterrupted.” – Surah Inshiqaq Ayat 25",
+"“Except what Allah should will. Indeed, He knows what is declared and what is hidden.” – Surah AL-Ala Ayat 7",
+"“And as for man, when his Lord tries him and [thus] is generous to him and favors him, he says, “My Lord has honored me.” – Surah Al-Fajr Ayat 15",
+"“We have certainly created man into hardship. Does he think that never will anyone overcome him?” – Surah Balad Ayat 4-5",
+"“And then being among those who believed and advised one another to patience and advised one another to compassion.” – Surah Balad Ayat 17",
+"“Your Lord has not taken leave of you, [O Muhammad], nor has He detested [you].” – Surah Ad-Duha Ayat 3",
+"“And He found you lost and guided [you], And He found you poor and made [you] self-sufficient.” – Surah Ad-Duha Ayat 7-8",
+"“For indeed, with hardship [will be] ease.” – Surah Ash-Sharh Ayat 5",
+"We have certainly created man in the best of stature; – Surah At-Tin Ayat 4",
+"“Does he not know that Allah sees?” – Surah Al-Alaq Ayat 14",
+"“Indeed mankind, to his Lord, is ungrateful. And indeed, he is to that a witness. And indeed he is, in love of wealth, intense.” – Surah Adiyat Ayat 6-8",
+"“Competition in [worldly] increase diverts you Until you visit the graveyards.” – Surah Takathur Ayat 1-2",
+"“Indeed, mankind is in loss, Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.” – Surah Al'Asr Ayat 1-3",
+];
+
+const INTERVAL = 86400000;
+
+function dispalyQuote(){
+
+    document.getElementById('widget').innerHTML =quotes[0];
+    quotes.forEach((quote, i) => {
+        setTimeout(() => {
+            document.getElementById('widget').innerHTML =quote;
+        }, i * INTERVAL);  
+    });
+    }
+
+    function dispalyWidget() {
+        dispalyQuote();
+        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    }
+    dispalyWidget()
+
+</script>
+
+</body>
+</html>
